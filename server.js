@@ -9,11 +9,15 @@ var myService = {
       MyService: {
           MyPort: {
               MyFunction: function(args) {
-                  console.log('inside MyFunction');
-                  return {
-                      name: args.name,
-                      testParam: args.testParam
-                  };
+                  if(args.message === 'Cat') {
+                    return {
+                      message: 'MEOW!'
+                    }
+                  } else {
+                    return {
+                        message: 'WOOF :('
+                    }
+                  }
               }
           }
       }
