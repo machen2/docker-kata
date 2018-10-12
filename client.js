@@ -8,7 +8,7 @@ soap.createClient(url, function(err, client) {
     //     console.log(result);
     // });
     console.log('url ' + url);
-    console.log('client ' + client);
+    //console.log(client);
     //console.log('func ' + client['MyFunction']);
 
     if (err) {
@@ -19,13 +19,11 @@ soap.createClient(url, function(err, client) {
         //console.log("Client description:" , description);
         // Go on and call the method.
         //var MyFunction = client['check_username'];
-        console.log('hello');
 
         //, envelope, soapHeader
         client.MyFunction(args, function(err, result) {
-            console.log('Result: \n' + JSON.stringify(result));
             if(err) {
-              console.log(err)
+              console.log('Error' + err)
             } else {
               //console.log('Response Envelope: \n' + envelope);
               console.log('Result: \n' + JSON.stringify(result));

@@ -19,7 +19,7 @@ var myService = {
       }
   };
 
-var xml = require('fs').readFileSync('./myservice.wsdl', 'utf8');
+var xml = require('fs').readFileSync('./myService.wsdl', 'utf8');
 
 //express server example
 var app = express();
